@@ -1,0 +1,40 @@
+MIT License
+
+Copyright (c) 2026 Cao Chí Tâm
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+===========================================================================
+为什么这个文件在这里（归属说明）
+
+本仓库 `provider/src/` 目录下的锁屏凭据提供者（Credential Provider）是上面这份 MIT
+许可的作品的**改编件**：
+
+    上游项目： caochitam/windows-face-unlock
+              https://github.com/caochitam/windows-face-unlock  (master 分支的 LICENSE)
+    上游目录： credential_provider/
+    改编为  ： 声纹解锁的 Credential Provider（人脸 → 声纹）
+
+按 MIT 的要求，上面那份版权与许可声明**必须随改编件一起保留**，因此放在这里。
+
+具体改了哪些东西（逐项对照表）见 `src/PROVENANCE.md`；改编脚本是 `../adapt.ps1`。
+上游源码原样副本**不随本仓库分发**（见根目录 `.gitignore` 里的 `provider/ref/`）——
+需要重跑改编脚本时，自行把上游仓库的 `credential_provider/` 放到 `provider/ref/` 即可。
+
+本仓库其余部分（Python 运行时、判定逻辑、安装与打包、文档）为原创，见根目录 `LICENSE`。

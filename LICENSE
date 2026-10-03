@@ -1,0 +1,46 @@
+MIT License
+
+Copyright (c) 2026 VoiceUnlock contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---------------------------------------------------------------------------
+第三方组件（不适用上面的 MIT 许可，各自从其原始许可）：
+
+  models/campplus.onnx
+      CAM++ 说话人声纹模型权重的 ONNX 格式转换件
+      上游：iic/speech_campplus_sv_zh-cn_16k-common（阿里巴巴 / DAMO 达摩院）
+      许可：Apache License 2.0 —— 全文见 packaging/LICENSE-Apache-2.0.txt
+      归属与修改声明见 packaging/THIRD-PARTY-NOTICES.txt（§4(a)(b)(c) 义务）
+
+  该模型不随本仓库分发（见 .gitignore），请按 README 的说明从上游获取并自行导出。
+  安装包中随附的许可文本对再分发方同样适用。
+
+  provider/src/  锁屏凭据提供者的 C++ 源码
+      改编自：caochitam/windows-face-unlock（MIT）
+      许可与归属：见 provider/LICENSE-upstream-windows-face-unlock.txt
+      逐项改动对照表：见 provider/src/PROVENANCE.md
+
+  packaging/ChineseSimplified.isl
+      Inno Setup 的简体中文语言文件（第三方翻译）
+      来源：https://github.com/kira-96/Inno-Setup-Chinese-Simplified
+      文件头保留了原作者署名与联系方式；仅用于让安装向导显示中文。
+
+  dist/ 里的安装包还随附上述各许可文本（许可人要求随二进制分发）。
+

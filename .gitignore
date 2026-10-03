@@ -1,0 +1,49 @@
+# ⚠ 本文件里**不要写行尾注释**：gitignore 不支持 `pattern  # 说明` 这种写法，
+#   整行会被当成一个模式（含 # 和空格），结果是规则静默失效 —— 本项目真踩过：
+#   一条 `iso/   # ...` 让 5.8 GB 的 ISO 被 git add 进去了。
+
+# ───────────── 本机数据（绝不发布）─────────────
+credential.bin
+profiles.json
+state.json
+*.bin
+*.npy
+
+# ───────────── 构建产物（可重建）─────────────
+dist/
+build/
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# ───────────── 虚拟环境 / 大文件 / 第三方原包 ─────────────
+venv/
+iso/
+ref/
+staging/
+logs/
+models/*.onnx
+models/*.bin
+models/campplus_sv/
+*.log
+
+# ───────────── 不该进本仓库的第三方/无关文件 ─────────────
+# 上游 windows-face-unlock 的原样副本：改编件在 provider/src/（见 provider/LICENSE-upstream-*.txt）
+provider/ref/
+# Microsoft VS Build Tools 的在线安装器（4.5 MB，需要时自己下）
+tools/vs_BuildTools.exe
+# 与本项目无关的代理节点选择脚本（它会读用户自己的 clash 配置）
+tools/clash-pick.cjs
+# PyInstaller 自动生成的过时 spec（相对路径 + upx=True，与本项目"UPX 一律关"矛盾）。
+# 真正用的是 packaging/vu.spec —— 这个不发布，免得有人误用。
+packaging/VoiceUnlock.spec
+
+# ───────────── 隐私扫描用的"本机敏感串"清单 ─────────────
+sensitive_tokens.txt
+
+# ───────────── 编辑器 / 系统 ─────────────
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+*~

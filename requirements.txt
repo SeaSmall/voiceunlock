@@ -1,0 +1,15 @@
+# 运行时依赖（Windows x64 / Python 3.12）
+# 安装： venv\Scripts\pip install -r requirements.txt
+#
+# ★ 本项目【不需要】torch / funasr —— 声纹推理走 ONNX，只用下面这几个。
+#   torch 只在"把上游 CAM++ 权重导出成 ONNX"那一步用过（tools\export_onnx.py），
+#   是一次性离线工具，不进运行时。
+
+numpy>=2.0
+onnxruntime>=1.17
+kaldi-native-fbank>=1.20
+SoundCard>=0.4.2
+cffi>=1.16            # SoundCard 的底层依赖
+
+# 打包/发布（只想跑源码的话可以不装）
+pyinstaller>=6.10
